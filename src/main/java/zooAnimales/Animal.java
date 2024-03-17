@@ -9,6 +9,7 @@ public class Animal extends Zona{
     int edad;
     String habitat;
     String genero;
+    Zoologico zoo;
     Zona zona;
     int totalPeces = 0;
     
