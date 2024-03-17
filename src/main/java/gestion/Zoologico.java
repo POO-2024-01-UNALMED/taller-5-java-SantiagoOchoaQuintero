@@ -15,6 +15,13 @@ public class Zoologico{
         this.cantidadTotal = 0;
     }
 
+    public Zoologico(){
+        this.nombre = "";
+        this.ubicacion = "";
+        this.Zonas = new ArrayList<Object>();
+        this.cantidadTotal = 0;
+    }
+
     public void agregarZonas(Zona Zona){
         Zonas.add(Zona);
     }

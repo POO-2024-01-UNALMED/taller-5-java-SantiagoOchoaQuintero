@@ -8,10 +8,9 @@ public class Ave extends Animal{
     int halcones;
     int aguilas;
     String colorPlumas;
-    Zona habitat;
-    Zona montanas = new Zona("montanas", null);
+    String habitat;
 
-    public Ave(String colorPlumas, Zona zona){
+    public Ave(String colorPlumas, String zona){
         this.colorPlumas = colorPlumas;
         this.habitat = zona;
     }
@@ -33,11 +32,20 @@ public class Ave extends Animal{
     }
 
     public void crearHalcon(){
-    	new Ave("cafe glorioso", montanas);
+    	new Ave("cafe glorioso", "montanas");
     	halcones += 1;
     }
     public void crearAguila(){
-    	new Ave("blanco y amarillo", montanas);
+    	new Ave("blanco y amarillo", "montanas");
+        aguilas += 1;
+
+    }
+    public void crearHalcon(String colorPlumas, String habitat){
+    	new Ave(colorPlumas, habitat);
+    	halcones += 1;
+    }
+    public void crearAguila(String colorPlumas, String habitat){
+    	new Ave(colorPlumas, habitat);
         aguilas += 1;
 
     }

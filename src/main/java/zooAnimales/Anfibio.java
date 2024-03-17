@@ -8,11 +8,10 @@ public class Anfibio {
     int salamandras;
     String colorPiel;
     Boolean venenoso;
-    Zona habitat;
+    String habitat;
 
-    Zona selva = new Zona("selva", null);
 
-    public Anfibio(String colorPiel, Boolean venenoso, Zona habitat){
+    public Anfibio(String colorPiel, Boolean venenoso, String habitat){
         this.habitat = habitat;
         this.colorPiel = colorPiel;
         this.venenoso = venenoso;
@@ -32,12 +31,21 @@ public class Anfibio {
     }
 
     public void crearRana(){
-        new Anfibio("rojo",true,selva);
+        new Anfibio("rojo",true,"selva");
         ranas += 1;
     }
 
     public void crearSalamandra(){
-        new Anfibio("negro y amarillo",false, selva);
+        new Anfibio("negro y amarillo",false, "selva");
+        salamandras += 1;
+    }
+    public void crearRana(String colorPiel,Boolean venenoso ,String habitat){
+        new Anfibio(colorPiel, venenoso, habitat);
+        ranas += 1;
+    }
+
+    public void crearSalamandra(String colorPiel,Boolean venenoso ,String habitat){
+        new Anfibio(colorPiel, venenoso, habitat);
         salamandras += 1;
     }
 

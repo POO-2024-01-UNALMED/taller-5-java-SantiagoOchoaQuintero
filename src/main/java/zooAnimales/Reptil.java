@@ -9,12 +9,9 @@ public class Reptil {
     int serpientes;
     String colorEscamas;
     int largoCola;
-    Zona habitat;
-
-    Zona jungla = new Zona("jungla", null);
-    Zona humedal = new Zona("humedal", null);
+    String habitat;
     
-    public Reptil(String colorEscamas, int largo, Zona habitat){
+    public Reptil(String colorEscamas, int largo, String habitat){
         this.colorEscamas = colorEscamas;
         this.largoCola = largo;
         this.habitat = habitat;
@@ -33,12 +30,20 @@ public class Reptil {
     }
 
     public void crearIguana(){
-        new Reptil("verde", 3, humedal);
+        new Reptil("verde", 3, "humedal");
+        iguanas += 1;
+    }
+    public void crearIguana(String color, int largoCola, String habitat){
+        new Reptil(color, largoCola, habitat);
         iguanas += 1;
     }
 
     public void crearSerpiente(){
-        new Reptil("blanco", 1, jungla);
+        new Reptil("blanco", 1, "jungla");
+        serpientes += 1;
+    }
+    public void crearSerpiente(String color, int largoCola, String habitat){
+        new Reptil(color, largoCola, habitat);
         serpientes += 1;
     }
 
