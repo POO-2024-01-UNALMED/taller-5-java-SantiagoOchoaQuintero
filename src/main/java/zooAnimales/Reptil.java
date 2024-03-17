@@ -5,8 +5,8 @@ import java.util.ArrayList;
 
 public class Reptil {
     ArrayList<Object> Reptil = new ArrayList<>();
-    public int iguanas;
-    public int serpientes;
+    public static int iguanas;
+    public static int serpientes;
     String colorEscamas;
     int largoCola;
     String habitat;
@@ -42,10 +42,12 @@ public class Reptil {
         new Reptil("blanco", 1, "jungla");
         serpientes += 1;
     }
-    public void crearSerpiente(String color, int largoCola, String habitat){
-        new Reptil(color, largoCola, habitat);
+
+    public static Reptil crearSerpiente(String nombre, int edad, String genero){
         serpientes += 1;
+        return new Reptil(nombre , edad, genero);
     }
+    
 
 
 }

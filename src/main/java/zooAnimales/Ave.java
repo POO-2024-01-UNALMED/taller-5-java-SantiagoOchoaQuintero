@@ -5,8 +5,8 @@ import gestion.Zoologico;
 
 public class Ave extends Animal{
     ArrayList<Object> Ave = new ArrayList<>();
-    public int halcones;
-    public int aguilas;
+    public static int halcones;
+    public static int aguilas;
     String colorPlumas;
     String habitat;
 
@@ -46,14 +46,14 @@ public class Ave extends Animal{
         aguilas += 1;
 
     }
-    public void crearHalcon(String nombre, int edad, String genero){
-    	new Ave(nombre, edad, genero);
-    	halcones += 1;
+    public static Ave crearHalcon(String nombre, int edad, String genero){
+        halcones += 1;
+    	return new Ave(nombre, edad, genero);
+    	
     }
-    public void crearAguila(String nombre, int edad, String genero){
-    	new Ave(nombre, edad, genero);
+    public static Ave crearAguila(String nombre, int edad, String genero){
         aguilas += 1;
-
+    	return new Ave(nombre, edad, genero);
     }
     
 }

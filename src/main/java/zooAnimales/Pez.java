@@ -4,8 +4,8 @@ import gestion.*;
 
 public class Pez extends Animal{
     ArrayList<Object> Pez = new ArrayList<>();
-    public int salmones;
-    public int bacalaos;
+    public static int salmones;
+    public static int bacalaos;
     String colorEscamas;
     int cantidadAletas;
     String habitat;
@@ -40,5 +40,14 @@ public class Pez extends Animal{
     public void crearBacalao(){
         new Pez("gris",6,"oceano");
         bacalaos += 1;
+    }
+    public static Pez crearSalmon(String nombre, int edad, String genero){
+        salmones += 1;
+        return new Pez(nombre, edad, genero);
+    }
+
+    public static Pez crearBacalao(String nombre, int edad, String genero){
+        bacalaos += 1;
+        return new Pez(nombre, edad, genero);
     }
 }
