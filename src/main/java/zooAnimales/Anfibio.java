@@ -11,7 +11,8 @@ public class Anfibio {
     Zona habitat;
 
     Zona selva = new Zona("selva", null);
-    public Rana(Strign colorPiel, Boolean venenoso, Zona habitat){
+
+    public Anfibio(String colorPiel, Boolean venenoso, Zona habitat){
         this.habitat = habitat;
         this.colorPiel = colorPiel;
         this.venenoso = venenoso;
@@ -20,22 +21,22 @@ public class Anfibio {
     }
 
 
-    public cantidadAnfibios(){
+    public int cantidadAnfibios(){
         return ranas + salamandras;
     }
     public String movimiento(){
-        System.out.println("saltar");
+        return "saltar";
     }
-    public totalPorTipo(){
+    public int totalPorTipo(){
         return ranas + salamandras;
     }
 
-    public crearRana(){
+    public void crearRana(){
         new Anfibio("rojo",true,selva);
         ranas += 1;
     }
 
-    public crearSalamandra(){
+    public void crearSalamandra(){
         new Anfibio("negro y amarillo",false, selva);
         salamandras += 1;
     }

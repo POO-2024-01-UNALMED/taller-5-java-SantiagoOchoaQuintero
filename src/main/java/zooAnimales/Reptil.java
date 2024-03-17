@@ -21,7 +21,6 @@ public class Reptil {
         Reptil.add(this);
     }
     public Reptil(){
-
         Reptil.add(this);
     }
 
@@ -33,12 +32,12 @@ public class Reptil {
         return "reptar";
     }
 
-    public crearIguana(){
+    public void crearIguana(){
         new Reptil("verde", 3, humedal);
         iguanas += 1;
     }
 
-    public crearSerpiente(){
+    public void crearSerpiente(){
         new Reptil("blanco", 1, jungla);
         serpientes += 1;
     }
