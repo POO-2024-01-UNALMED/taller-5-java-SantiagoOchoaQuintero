@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import gestion.*;
 
 public class Anfibio {
-    ArrayList<String> Anfibio = new ArrayList<>();
+    ArrayList<Object> Anfibio = new ArrayList<>();
     int ranas;
     int salamandras;
     String colorPiel;

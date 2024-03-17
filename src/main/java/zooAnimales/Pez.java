@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import gestion.*;
 
 public class Pez extends Animal{
-    ArrayList<String> Pez = new ArrayList<>();
+    ArrayList<Object> Pez = new ArrayList<>();
     int salmones;
     int bacalaos;
     String colorEscamas;

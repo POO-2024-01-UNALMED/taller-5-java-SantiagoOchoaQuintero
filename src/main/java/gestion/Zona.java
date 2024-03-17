@@ -1,13 +1,12 @@
 package gestion;
 import java.util.ArrayList;
-
 import zooAnimales.Animal; 
 
 
 public class Zona {
     String nombre;
     Zoologico zoo;
-    ArrayList<String> Animales;
+    ArrayList<Object> Animales;
 
     public Zona(String nombre, Zoologico zoo){
         this.Animales = new ArrayList<>();

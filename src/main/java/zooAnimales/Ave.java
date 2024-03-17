@@ -4,7 +4,7 @@ import gestion.Zona;
 import gestion.Zoologico;
 
 public class Ave extends Animal{
-    ArrayList<String> Ave = new ArrayList<>();
+    ArrayList<Object> Ave = new ArrayList<>();
     int halcones;
     int aguilas;
     String colorPlumas;
