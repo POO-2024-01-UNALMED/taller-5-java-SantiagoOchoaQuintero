@@ -5,8 +5,8 @@ import java.util.ArrayList;
 
 public class Reptil {
     ArrayList<Object> Reptil = new ArrayList<>();
-    int iguanas;
-    int serpientes;
+    public int iguanas;
+    public int serpientes;
     String colorEscamas;
     int largoCola;
     String habitat;

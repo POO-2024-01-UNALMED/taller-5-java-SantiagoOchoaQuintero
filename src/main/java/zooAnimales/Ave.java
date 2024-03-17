@@ -5,14 +5,20 @@ import gestion.Zoologico;
 
 public class Ave extends Animal{
     ArrayList<Object> Ave = new ArrayList<>();
-    int halcones;
-    int aguilas;
+    public int halcones;
+    public int aguilas;
     String colorPlumas;
     String habitat;
 
     public Ave(String colorPlumas, String zona){
         this.colorPlumas = colorPlumas;
         this.habitat = zona;
+    }
+
+    public Ave(String nombre, int edad, String genero){
+        this.nombre = nombre;
+        this.edad = edad;
+        this.genero = genero;
     }
 
     public Ave(){
@@ -40,12 +46,12 @@ public class Ave extends Animal{
         aguilas += 1;
 
     }
-    public void crearHalcon(String colorPlumas, String habitat){
-    	new Ave(colorPlumas, habitat);
+    public void crearHalcon(String nombre, int edad, String genero){
+    	new Ave(nombre, edad, genero);
     	halcones += 1;
     }
-    public void crearAguila(String colorPlumas, String habitat){
-    	new Ave(colorPlumas, habitat);
+    public void crearAguila(String nombre, int edad, String genero){
+    	new Ave(nombre, edad, genero);
         aguilas += 1;
 
     }

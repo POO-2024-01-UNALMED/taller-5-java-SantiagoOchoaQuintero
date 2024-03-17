@@ -4,8 +4,8 @@ import gestion.*;
 
 public class Anfibio {
     ArrayList<Object> Anfibio = new ArrayList<>();
-    int ranas;
-    int salamandras;
+    public int ranas;
+    public int salamandras;
     String colorPiel;
     Boolean venenoso;
     String habitat;

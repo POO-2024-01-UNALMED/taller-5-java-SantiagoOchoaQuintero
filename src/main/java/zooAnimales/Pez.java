@@ -4,8 +4,8 @@ import gestion.*;
 
 public class Pez extends Animal{
     ArrayList<Object> Pez = new ArrayList<>();
-    int salmones;
-    int bacalaos;
+    public int salmones;
+    public int bacalaos;
     String colorEscamas;
     int cantidadAletas;
     String habitat;
