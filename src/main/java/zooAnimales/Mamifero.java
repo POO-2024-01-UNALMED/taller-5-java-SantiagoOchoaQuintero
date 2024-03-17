@@ -33,22 +33,26 @@ public class Mamifero extends Animal{
         new Mamifero(true, 4, "selva");
         leones += 1;
     }
-    public void crearCaballo(Boolean pelaje, int patas, String habitat){
-    	new Mamifero(pelaje,patas, habitat);
+    public Mamifero crearCaballo(Boolean pelaje, int patas, String habitat){
         caballos += 1;
+    	return new Mamifero(pelaje,patas, habitat);
+        
     }
-    public void crearLeon(Boolean pelaje, int patas, String habitat){
-        new Mamifero(pelaje,patas, habitat);
+    public Mamifero crearLeon(Boolean pelaje, int patas, String habitat){
         leones += 1;
+        return new Mamifero(pelaje,patas, habitat);
+        
     }
 
-    public void crearLeon(String nombre, int edad, String genero){
-        new Mamifero(nombre, edad, genero);
+    public Mamifero crearLeon(String nombre, int edad, String genero){
         leones += 1;
+        return new Mamifero(nombre, edad, genero);
+        
     }
-    public void crearCaballo(String nombre, int edad, String genero){
-        new Mamifero(nombre, edad, genero);
+    public Mamifero crearCaballo(String nombre, int edad, String genero){
         caballos += 1;
+        return new Mamifero(nombre, edad, genero);
+        
     }
     
     public int cantidadMamiferos(){
