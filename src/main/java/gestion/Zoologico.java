@@ -32,8 +32,8 @@ public class Zoologico{
 		return totalAnimales;
 	}
 
-    public ArrayList getZona(){
-        return this.Zonas;
+    public ArrayList<Zona> getZona(){
+        return Zonas;
     }
  
 
