@@ -20,7 +20,7 @@ public class Zona{
     }
 
     public int cantidadAnimales() {
-    	return this.Animales.size();
+    	return Animales.size();
     }
     public void agregarAnimales(Animal animal){
         this.Animales.add(animal);
