@@ -23,7 +23,7 @@ public class Zoologico{
     }
 
     public void agregarZonas(Zona zona){
-        Zonas.add(zona);
+        this.Zonas.add(zona);
     }
 
     public int cantidadTotalAnimales(){

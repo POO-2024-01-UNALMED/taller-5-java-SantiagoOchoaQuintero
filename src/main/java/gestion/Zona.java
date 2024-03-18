@@ -4,7 +4,7 @@ import gestion.Zoologico;
 import zooAnimales.Animal; 
 
 
-public class Zona extends Zoologico{
+public class Zona{
     String nombre;
     static Zoologico zoo;
     ArrayList<Object> Animales;
