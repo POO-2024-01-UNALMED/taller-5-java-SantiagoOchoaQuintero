@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import gestion.*;
 
 public class Anfibio extends Animal{
-    ArrayList<Object> Anfibio = new ArrayList<>();
+    static ArrayList<Object> Anfibio = new ArrayList<>();
     public static int ranas;
     public static int salamandras;
     String colorPiel;
@@ -47,9 +47,6 @@ public class Anfibio extends Animal{
     }
     public String movimiento(){
         return "saltar";
-    }
-    public int totalPorTipo(){
-        return ranas + salamandras;
     }
     public String getColorPiel(){
         return this.colorPiel;

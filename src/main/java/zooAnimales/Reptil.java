@@ -4,7 +4,7 @@ import gestion.Zoologico;
 import java.util.ArrayList; 
 
 public class Reptil extends Animal{
-    ArrayList<Object> Reptil = new ArrayList<>();
+    static ArrayList<Object> Reptil = new ArrayList<>();
     public static int iguanas;
     public static int serpientes;
     String colorEscamas;

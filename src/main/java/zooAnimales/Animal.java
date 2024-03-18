@@ -11,7 +11,11 @@ public class Animal extends Zona{
     String genero;
     Zoologico zoo;
     Zona zona;
-    int totalPeces = 0;
+    // int totalPeces = 0;
+    // int totalAves = 0;
+    // int totalMamiferos = 0;
+    // int totalAnfibios = 0;
+    // int totalReptiles = 0;
     
     public Animal(String nombre, int edad, String habitat, String genero){
         this.nombre = nombre;
@@ -39,19 +43,13 @@ public class Animal extends Zona{
     public String movimiento(){
        return "desplazarse";
     }
-    public String totalPorTipo(){
-        return "Hoal";
-    }
-    
-    public void sumarAnimales(String tipo){
-        totalAnimales += 1;
-        switch (tipo) {
-            case "pez":
-                totalPeces += 1;
-            break;
-            default:
-                break;
-        }
+    public static String totalPorTipo(){
+        return "Mamiferos:"+Mamifero.Mamifero.size() + 
+        "Aves:"+Ave.Ave.size() + 
+        "Reptiles"+Reptil.Reptil.size() + 
+        "Peces:"+Pez.Pez.size() + 
+        "Anfibios:"+Anfibio.Anfibio.size();
+        
     }
 
     public String getHabitat(){
@@ -63,7 +61,6 @@ public class Animal extends Zona{
     public int getEdad(){
         return this.edad;
     }
-
 
     @Override
     public String toString(){
