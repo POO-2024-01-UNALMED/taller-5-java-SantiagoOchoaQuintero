@@ -29,7 +29,7 @@ public class Animal {
     public static String totalPorTipo(){
         return "Mamiferos: "+(Mamifero.cantidadMamiferos()+1)+"\n"+ 
         "Aves: "+Ave.cantidadAves()+"\n"+ 
-        "Reptiles "+Reptil.cantidadReptiles()+"\n"+ 
+        "Reptiles: "+Reptil.cantidadReptiles()+"\n"+ 
         "Peces: "+Pez.cantidadPeces()+"\n"+
         "Anfibios: "+(Anfibio.cantidadAnfibios()+1);  
     }
