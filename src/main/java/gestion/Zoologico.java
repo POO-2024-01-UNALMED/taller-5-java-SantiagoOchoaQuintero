@@ -33,4 +33,8 @@ public class Zoologico{
         return cantidadTotal;
     }
 
+    public ArrayList getZona(){
+        return this.Zonas;
+    }
+
 }
