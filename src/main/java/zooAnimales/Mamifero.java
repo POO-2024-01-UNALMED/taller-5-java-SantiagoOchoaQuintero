@@ -29,9 +29,9 @@ public class Mamifero extends Animal{
     	return new Mamifero(nombre,edad,genero,true,4,pradera);
         
     }
-    public Mamifero crearLeon(String nombre, int edad, String genero){
+    public static Mamifero crearLeon(String nombre, int edad, String genero){
         leones += 1;
-        return new Mamifero(nombre,edad,genero,pelaje,patas, habitat);
+        return new Mamifero(nombre,edad,genero,true,4, selva);
         
     }
     
