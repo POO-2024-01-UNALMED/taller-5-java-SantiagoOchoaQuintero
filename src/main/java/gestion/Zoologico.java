@@ -36,9 +36,7 @@ public class Zoologico{
     public ArrayList getZona(){
         return this.Zonas;
     }
-    public int cantidadAnimales() {
-    	return 0;
-    }
+ 
 
     public String getNombre(){
         return this.nombre;
