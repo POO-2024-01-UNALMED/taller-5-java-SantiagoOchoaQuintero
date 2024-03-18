@@ -21,6 +21,9 @@ public class Zona extends Zoologico{
         this.zoo = null;
     }
 
+    public int cantidadAnimales() {
+    	return 0;
+    }
     public void agregarAnimales(Animal animal){
         this.Animales.add(animal);
     }
@@ -30,8 +33,5 @@ public class Zona extends Zoologico{
     }
     public Zoologico getZoo(){
         return this.zoo;
-    }
-    public int cantidadAnimales(){
-		return 0;
     }
 }

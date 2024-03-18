@@ -51,6 +51,9 @@ public class Animal extends Zona{
         
     }
 
+    public int cantidadAnimales() {
+    	return 0;
+    }
     public String getHabitat(){
         return this.habitat;
     }
