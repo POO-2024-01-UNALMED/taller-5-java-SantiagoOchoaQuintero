@@ -5,30 +5,32 @@ import zooAnimales.*;
 public class Zoologico{
     String nombre;
     String ubicacion;
-    ArrayList<Object> Zonas;
+    ArrayList<Zona> Zonas;
     static int cantidadTotal;
 
     public Zoologico(String nombre, String ubicacion){
         this.nombre = nombre;
         this.ubicacion = ubicacion;
-        this.Zonas = new ArrayList<Object>();
+        this.Zonas = new ArrayList<Zona>();
         this.cantidadTotal = 0;
     }
 
     public Zoologico(){
-        this.Zonas = new ArrayList<Object>();
+        this.Zonas = new ArrayList<Zona>();
     }
 
     public void agregarZonas(Zona zona){
         this.Zonas.add(zona);
     }
 
-    public int cantidadTotalAnimales(){
-        for (Object zona : Zonas) {
-            cantidadTotal = cantidadTotal + ((Zona) zona).cantidadAnimales();
-        }
-        return cantidadTotal;
-    }
+    public int cantidadTotalAnimales() {
+		int totalAnimales=0;
+		for (Zona zonas : Zonas) {
+			totalAnimales+=zonas.cantidadAnimales();
+				
+		}
+		return totalAnimales;
+	}
 
     public ArrayList getZona(){
         return this.Zonas;
