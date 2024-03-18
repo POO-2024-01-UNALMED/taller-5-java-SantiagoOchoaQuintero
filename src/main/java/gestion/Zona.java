@@ -31,7 +31,6 @@ public class Zona extends Zoologico{
     public Zoologico getZoo(){
         return this.zoo;
     }
-    @Override
     public int cantidadAnimales(){
 		return 0;
     }
