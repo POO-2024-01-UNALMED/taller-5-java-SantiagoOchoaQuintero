@@ -13,6 +13,14 @@ public class Animal extends Zona{
     Zona zona;
     int totalPeces = 0;
     
+    public Animal(String nombre, int edad, String habitat, String genero){
+        this.nombre = nombre;
+        this.edad = edad;
+        this.habitat = habitat;
+        this.genero = genero;
+
+    }
+
     public Animal(String nombre, String habitat, String genero, Zona zona, int Edad){
         this.nombre = nombre;
         this.habitat = habitat;
@@ -31,10 +39,10 @@ public class Animal extends Zona{
     public String movimiento(){
        return "desplazarse";
     }
-//    public totalPorTipo(){
-//    	
-//    }
-//    
+    public String totalPorTipo(){
+        return "Hoal";
+    }
+    
     public void sumarAnimales(String tipo){
         totalAnimales += 1;
         switch (tipo) {
@@ -44,6 +52,16 @@ public class Animal extends Zona{
             default:
                 break;
         }
+    }
+
+    public String getHabitat(){
+        return this.habitat;
+    }
+    public String getGenero(){
+        return this.genero;
+    }
+    public int getEdad(){
+        return this.edad;
     }
 
 

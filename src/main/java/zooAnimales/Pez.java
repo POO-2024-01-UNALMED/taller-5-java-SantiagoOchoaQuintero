@@ -10,7 +10,10 @@ public class Pez extends Animal{
     int cantidadAletas;
     String habitat;
 
-    public Pez(String colorEscamas, int cantidadAletas, String habitat){
+    public Pez(String nombre,int edad, String habitat,String colorEscamas, String genero, int cantidadAletas){
+        this.nombre = nombre;
+        this.edad = edad;
+        this.genero=genero;
         this.colorEscamas = colorEscamas;
         this.habitat = habitat;
         this.cantidadAletas = cantidadAletas;
@@ -19,35 +22,29 @@ public class Pez extends Animal{
     } 
 
     public Pez(){
-        this("",0,null);
         Pez.add(this);
         
     }
+    public static Pez crearSalmon(String nombre, int edad, String genero){
+        salmones += 1;
+        return new Pez(nombre, edad, "oceano",genero,"rojo",6);
+    }
 
+    public static Pez crearBacalao(String nombre, int edad, String genero){
+        bacalaos += 1;
+        return new Pez(nombre, edad, "oceano",genero,"gris",6);
+    }
+    public String getColorEscamas(){
+        return this.colorEscamas;
+    }
+    public int getCantidadAletas(){
+        return this.cantidadAletas;
+    }
     public int cantidadPeces(){
         return salmones + bacalaos;
     }
 
     public String movimiento(){
         return "nadar";
-    }
-
-    public void crearSalmon(){
-        new Pez("rojo",6,"oceano");
-        salmones += 1;
-    }
-
-    public void crearBacalao(){
-        new Pez("gris",6,"oceano");
-        bacalaos += 1;
-    }
-    public static Pez crearSalmon(String nombre, int edad, String genero){
-        salmones += 1;
-        return new Pez(nombre, edad, genero);
-    }
-
-    public static Pez crearBacalao(String nombre, int edad, String genero){
-        bacalaos += 1;
-        return new Pez(nombre, edad, genero);
     }
 }

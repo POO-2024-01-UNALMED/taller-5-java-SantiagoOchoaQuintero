@@ -37,4 +37,8 @@ public class Zoologico{
         return this.Zonas;
     }
 
+    public String getNombre(){
+        return this.nombre;
+    }
+
 }

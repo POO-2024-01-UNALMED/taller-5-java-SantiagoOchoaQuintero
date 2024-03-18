@@ -27,5 +27,12 @@ public class Zona {
     public int cantidadAnimales(){
         return this.Animales.size();
     }
+
+    public String getNombre(){
+       return this.nombre;
+    }
+    public Zoologico getZoo(){
+        return this.zoo;
+    }
 }
 

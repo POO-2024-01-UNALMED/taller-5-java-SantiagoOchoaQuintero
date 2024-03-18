@@ -8,10 +8,22 @@ public class Anfibio extends Animal{
     public static int salamandras;
     String colorPiel;
     Boolean venenoso;
-    Zona habitat;
+    String habitat;
     static Zona selva =  new Zona("Selva", null);
 
-    public Anfibio(String nombre, int edad,String genero,String colorPiel, Boolean venenoso, Zona habitat){
+    public Anfibio(){
+        Anfibio.add(this);
+    }
+    public Anfibio(String nombre, int edad, String habitat,String genero, String colorPiel, boolean venenoso ){
+        this.nombre=nombre;
+        this.edad=edad;
+        this.genero= genero;
+        this.habitat = habitat;
+        this.colorPiel = colorPiel;
+        this.venenoso = venenoso;
+    }
+
+    public Anfibio(String nombre, int edad,String genero,String colorPiel, Boolean venenoso, String habitat){
         this.nombre=nombre;
         this.edad=edad;
         this.genero= genero;
@@ -22,13 +34,13 @@ public class Anfibio extends Animal{
     }
     public static Anfibio crearRana(String nombre,int edad ,String genero){
         ranas += 1;
-        return new Anfibio(nombre, edad, genero,"rojo",true,selva);
+        return new Anfibio(nombre, edad, genero,"rojo",true,"selva");
         
     }
 
     public static Anfibio crearSalamandra(String nombre,int edad ,String genero){
         salamandras += 1;
-        return new Anfibio(nombre, edad, genero,"rojo",true,selva);
+        return new Anfibio(nombre, edad, genero,"rojo",true,"selva");
     }
     public int cantidadAnfibios(){
         return ranas + salamandras;
@@ -38,6 +50,12 @@ public class Anfibio extends Animal{
     }
     public int totalPorTipo(){
         return ranas + salamandras;
+    }
+    public String getColorPiel(){
+        return this.colorPiel;
+    }
+    public Boolean isVenenoso(){
+        return this.venenoso;
     }
 // public void crearRana(){
     //     new Anfibio("rojo",true,"selva");

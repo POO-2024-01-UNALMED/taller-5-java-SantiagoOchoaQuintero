@@ -9,12 +9,13 @@ public class Reptil extends Animal{
     public static int serpientes;
     String colorEscamas;
     int largoCola;
-    Zona habitat;
+    String habitat;
 
-    static Zona humedal = new Zona("humedal", null);
-
+    public Reptil(){
+        Reptil.add(this);
+    }
     
-    public Reptil(String nombre, int edad, String genero, String colorEscamas, int largoCola, Zona habitat){
+    public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola){
         this.nombre = nombre;
         this.edad = edad;
         this.genero = genero; 
@@ -26,11 +27,11 @@ public class Reptil extends Animal{
     }
     public static Reptil crearIguana(String nombre, int edad, String genero){
         iguanas += 1;
-        return new Reptil(nombre , edad, genero, "verde", 3, humedal);
+        return new Reptil(nombre , edad, "humedal", genero,"verde", 3);
     }
     public static Reptil crearSerpiente(String nombre, int edad, String genero){
         serpientes += 1;
-        return new Reptil(nombre , edad, genero, "blanco", 1, humedal);
+        return new Reptil(nombre , edad,"humedal", genero, "blanco", 1);
     }
     public int cantidadReptiles(){
         return serpientes + iguanas;
@@ -38,5 +39,12 @@ public class Reptil extends Animal{
     public String movimiento(){
         return "reptar";
     }
+    public String getColorEscamas(){
+        return this.colorEscamas;
+    }   
+    public int getLargoCola(){
+        return this.largoCola;
+    }
+
 
 }
