@@ -16,9 +16,7 @@ public class Zona{
     }
 
     public Zona(){
-        this.Animales = new ArrayList<Object>();
-        this.nombre = null;
-        this.zoo = null;
+    	return;
     }
 
     public int cantidadAnimales() {
