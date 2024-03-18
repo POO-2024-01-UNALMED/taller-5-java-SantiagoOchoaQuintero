@@ -6,7 +6,7 @@ public class Zoologico{
     String nombre;
     String ubicacion;
     ArrayList<Object> Zonas;
-    int cantidadTotal;
+    static int cantidadTotal;
 
     public Zoologico(String nombre, String ubicacion){
         this.nombre = nombre;
@@ -22,23 +22,26 @@ public class Zoologico{
         this.cantidadTotal = 0;
     }
 
-    public void agregarZonas(Zona Zona){
-        Zonas.add(Zona);
+    public void agregarZonas(Zona zona){
+        Zonas.add(zona);
+        System.out.println(zona);
     }
 
     public int cantidadTotalAnimales(){
         for (Object zona : Zonas) {
             cantidadTotal = cantidadTotal + ((Zona) zona).cantidadAnimales();
-          }
+        }
         return cantidadTotal;
     }
 
     public ArrayList getZona(){
         return this.Zonas;
     }
+    public int cantidadAnimales(){
+		return 0;
+    }
 
     public String getNombre(){
         return this.nombre;
     }
-
 }

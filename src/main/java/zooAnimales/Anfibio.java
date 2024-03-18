@@ -54,13 +54,4 @@ public class Anfibio extends Animal{
     public Boolean isVenenoso(){
         return this.venenoso;
     }
-// public void crearRana(){
-    //     new Anfibio("rojo",true,"selva");
-    //     ranas += 1;
-    // }
-
-    // public void crearSalamandra(){
-    //     new Anfibio("negro y amarillo",false, "selva");
-    //     salamandras += 1;
-    // }
 }
