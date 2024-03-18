@@ -31,12 +31,7 @@ public class Zona extends Zoologico{
     public Zoologico getZoo(){
         return this.zoo;
     }
-    public int cantidadAnimales(){
+    public static int cantidadAnimales(){
 		return 0;
-    }
-    public static void main (String args[])
-    {
-       Zoologico zoo = new Zoologico();
-       
     }
 }
