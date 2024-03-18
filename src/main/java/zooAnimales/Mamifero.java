@@ -9,49 +9,29 @@ public class Mamifero extends Animal{
     public static int leones;
     boolean pelaje;
     int patas;
-    String habitat;
+    Zona habitat;
 
-    public Mamifero (boolean pelaje, int patas, String habitat){
-        this.pelaje = pelaje;
-        this.patas = patas;
-        this.habitat = habitat;
-    }
-    public Mamifero(String nombre, int edad, String genero){
+    static Zona pradera = new Zona("pradera", null);
+    static Zona selva = new Zona("selva", null);
+
+    public Mamifero (String nombre, int edad, String genero, boolean pelaje, int patas, Zona habitat){
         this.nombre = nombre;
         this.edad = edad;
         this.genero = genero;
-    }
-    public Mamifero(){
-        this(false, 0, null);
-        Mamifero.add(this);
-    }
-    public void crearCaballo(){
-    	new Mamifero(true, 4, "pradera");
-        caballos += 1;
-    }
-    public void crearLeon(){
-        new Mamifero(true, 4, "selva");
-        leones += 1;
-    }
-    public Mamifero crearCaballo(Boolean pelaje, int patas, String habitat){
-        caballos += 1;
-    	return new Mamifero(pelaje,patas, habitat);
-        
-    }
-    public Mamifero crearLeon(Boolean pelaje, int patas, String habitat){
-        leones += 1;
-        return new Mamifero(pelaje,patas, habitat);
-        
-    }
+        this.pelaje = pelaje;
+        this.patas = patas;
+        this.habitat = habitat;
 
-    public static Mamifero crearLeon(String nombre, int edad, String genero){
-        leones += 1;
-        return new Mamifero(nombre, edad, genero);
-        
+        Mamifero.add(this);
     }
     public static Mamifero crearCaballo(String nombre, int edad, String genero){
         caballos += 1;
-        return new Mamifero(nombre, edad, genero);
+    	return new Mamifero(nombre,edad,genero,true,4,pradera);
+        
+    }
+    public Mamifero crearLeon(String nombre, int edad, String genero){
+        leones += 1;
+        return new Mamifero(nombre,edad,genero,pelaje,patas, habitat);
         
     }
     

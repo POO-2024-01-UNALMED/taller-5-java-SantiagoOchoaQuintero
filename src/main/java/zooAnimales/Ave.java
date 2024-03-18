@@ -8,52 +8,41 @@ public class Ave extends Animal{
     public static int halcones;
     public static int aguilas;
     String colorPlumas;
-    String habitat;
+    Zona habitat;
+    static Zona montanas = new Zona("montanas",null);
 
-    public Ave(String colorPlumas, String zona){
-        this.colorPlumas = colorPlumas;
-        this.habitat = zona;
-    }
 
-    public Ave(String nombre, int edad, String genero){
+    public Ave(String nombre, int edad, String genero,String colorPlumas, Zona habitat){
         this.nombre = nombre;
         this.edad = edad;
         this.genero = genero;
-    }
-
-    public Ave(){
-    	this("cafe",null);
+        this.colorPlumas = colorPlumas;
+        this.habitat = habitat;
         Ave.add(this);
     }
-    public Ave(String nombre){
-        this.colorPlumas = nombre;
-        Ave.add(this);
-    }
-
+    public static Ave crearHalcon(String nombre, int edad, String genero){
+        halcones += 1;
+        return new Ave(nombre, edad, genero,"cafe glorioso", montanas); 
+        }
+        public static Ave crearAguila(String nombre, int edad, String genero){
+            aguilas += 1;
+            return new Ave(nombre, edad, genero,"blanco y amarillo", montanas);
+        }
     public int cantidadAves(){
         return halcones + aguilas;
     }
     public String movimiento(){
 		return "volar";
     }
+   
+    //     public void crearHalcon(){
+    //     // 	new Ave("cafe glorioso", "montanas");
+    //     // 	halcones += 1;
+    //     // }
+    //     // public void crearAguila(){
+    //     // 	new Ave("blanco y amarillo", "montanas");
+    //     //     aguilas += 1;
 
-    public void crearHalcon(){
-    	new Ave("cafe glorioso", "montanas");
-    	halcones += 1;
-    }
-    public void crearAguila(){
-    	new Ave("blanco y amarillo", "montanas");
-        aguilas += 1;
-
-    }
-    public static Ave crearHalcon(String nombre, int edad, String genero){
-        halcones += 1;
-    	return new Ave(nombre, edad, genero);
-    	
-    }
-    public static Ave crearAguila(String nombre, int edad, String genero){
-        aguilas += 1;
-    	return new Ave(nombre, edad, genero);
-    }
-    
+    //     // }
+    // }
 }
