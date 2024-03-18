@@ -3,14 +3,14 @@ import java.util.ArrayList;
 import gestion.*;
 
 public class Pez extends Animal{
-    static ArrayList<Object> Pez = new ArrayList<>();
+    static ArrayList<Pez> Pez = new ArrayList<>();
     public static int salmones;
     public static int bacalaos;
     String colorEscamas;
     int cantidadAletas;
     String habitat;
 
-    public Pez(String nombre,int edad, String habitat,String colorEscamas, String genero, int cantidadAletas){
+    public Pez(String nombre,int edad, String habitat,String genero,String colorEscamas,  int cantidadAletas){
         this.nombre = nombre;
         this.edad = edad;
         this.genero=genero;
@@ -46,5 +46,14 @@ public class Pez extends Animal{
 
     public String movimiento(){
         return "nadar";
+    }
+    public String getGenero(){
+        return this.genero;
+    }
+    public String getHabitat(){
+        return this.habitat;
+    }
+    public static ArrayList<Pez> getLista(){
+        return Pez;
     }
 }

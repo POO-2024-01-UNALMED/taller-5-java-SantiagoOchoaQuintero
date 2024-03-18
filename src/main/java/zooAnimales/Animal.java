@@ -44,11 +44,11 @@ public class Animal extends Zona{
        return "desplazarse";
     }
     public static String totalPorTipo(){
-        return "Mamiferos:"+Mamifero.Mamifero.size() + 
-        "Aves:"+Ave.Ave.size() + 
-        "Reptiles"+Reptil.Reptil.size() + 
-        "Peces:"+Pez.Pez.size() + 
-        "Anfibios:"+Anfibio.Anfibio.size();
+        return "Mamiferos: "+Mamifero.getLista().size()+"\n"+ 
+        "Aves: "+Ave.getLista().size()+"\n"+ 
+        "Reptiles "+Reptil.getLista().size()+"\n"+ 
+        "Peces: "+Pez.getLista().size()+"\n"+
+        "Anfibios: "+Anfibio.getLista().size();
         
     }
 
@@ -64,9 +64,14 @@ public class Animal extends Zona{
     public int getEdad(){
         return this.edad;
     }
-
+    public String getNombre(){
+        return this.nombre;
+    }
+    public Zona getZona(){
+        return this.zona;
+    }
     @Override
     public String toString(){
-        return "Mi nombre es"+this.nombre+", tengo una edad de "+this.edad+", habito en"+this.habitat+"y mi genero es"+this.genero+", la zona en la que me ubico es"+this.zona+"en el "+this.zoo;
+        return "Mi nombre es "+getNombre()+", tengo una edad de "+getEdad()+", habito en "+getHabitat()+" y mi genero es "+getGenero();
     }
 }

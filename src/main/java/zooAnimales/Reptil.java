@@ -4,7 +4,7 @@ import gestion.Zona;
 import gestion.Zoologico;
 
 public class Reptil extends Animal{
-    static ArrayList<Object> Reptil = new ArrayList<>();
+    static ArrayList<Reptil> Reptil = new ArrayList<>();
     public static int iguanas;
     public static int serpientes;
     String colorEscamas;
@@ -45,7 +45,12 @@ public class Reptil extends Animal{
     public int getLargoCola(){
         return this.largoCola;
     }
-
+    public String getHabitat(){
+        return this.habitat;
+    }
+    public static ArrayList<Reptil> getLista(){
+        return Reptil;
+    }
 
 }
 
