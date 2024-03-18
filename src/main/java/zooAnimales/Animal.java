@@ -21,6 +21,7 @@ public class Animal extends Zona{
         this.edad = edad;
         this.habitat = habitat;
         this.genero = genero;
+        totalAnimales += 1;
 
     }
 

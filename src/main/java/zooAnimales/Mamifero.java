@@ -48,7 +48,4 @@ public class Mamifero extends Animal{
     public int getPatas(){
         return this.patas;
     }
-    
-
-    
 }
